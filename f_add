@@ -1,0 +1,14 @@
+
+int f(int x_0, int y)
+{
+  int x;
+  x := x_0;
+  int d;
+  d := 0;
+  while (x < y)
+    {
+      x := x + 1;
+      d := d + 1;
+    }
+  return d;
+} 
