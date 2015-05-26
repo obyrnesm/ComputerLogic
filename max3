@@ -1,0 +1,41 @@
+@pre true
+@post rv >= x && rv >= y && rv >= z && 
+(rv = x || rv = y || rv = z)
+
+int m3 (int x, int y, int z){
+	int max; 
+	max := 1/3*( x + y + z + abs(x-y) + abs(x-z) + abs(y-z)
+	- 1/2*(abs(abs(x-y) - abs(x-z)) 
+	+ abs(abs(x-y) - abs(y-z)) 
+	+ abs(abs(x-z) - abs(y-z))) 
+	+ );
+	
+	
+	return max;
+	/*
+	456 258	149
+	19	27	30 25
+3	18	24	27
+4 24  32	36	
+					2+5+3
+	*/
+	/*
+	if(x >= y && x >= z)
+		return x;
+	else if(y >= x && y >= z)
+		return y;
+	else //if(z >= x && z >= y)
+		return z;
+	*/
+	/*
+	int m;
+	m:= x;
+	if(y>m)
+		m:= y;
+	if (z>m)
+		m:= z;
+	return m;
+	*/	
+}
+	
+
