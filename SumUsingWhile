@@ -1,0 +1,14 @@
+@pre x_0 >=0
+@post rv = x_0 + y_0
+int sum(int x_0, int y_0){
+	int x := x_0;
+	int y := y_0;
+	while
+	@L: x + y = x_0+y_0
+	(x !=0)
+	{
+		x :=x-1;
+		y := y+1;	
+	}
+	return y;
+}
